@@ -1,0 +1,57 @@
+
+
+<div class="searchbar">
+    <h1 style="margin: 10px;">Search</h1>
+    <label for = "searchbar" style="margin: 20px;">search bar</label>
+    <input type="text" id = "user" placeholder="name or email" [(ngModel)] = "word"/>
+    <button (click)="search()">search</button>
+   
+    
+</div>
+<div class="space"></div>
+
+
+<!-- background-color: rgb(242, 105, 38); -->
+
+      <section class="user" style=" size: 1000px; margin: auto;" *ngFor="let user of user">
+        <div class="container py-5 h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col col-lg-6 mb-4 mb-lg-0">
+              <div class="card mb-3" style="border-radius: .5rem;">
+                <div class="row g-0">
+                  <div class="col-md-4 gradient-custom text-center text-white"
+                    style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
+                      alt="Avatar" class="img-fluid my-5" style="width: 80px;" />
+                    <h3 style="line-height: 1;">{{user.firstName}}{{' '}}{{user.lastName}}</h3>
+                    <p style="line-height: 1;">{{user.role}}</p>
+                    <i class="far fa-edit mb-5"></i>
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body p-4">
+                      <h3 style="font-size: 20px;">Information</h3>
+                      <!-- <hr class="mt-0 mb-4"> -->
+                      <div class="row pt-1">
+                        <div class="col-6 mb-3">
+                          <h4 style="line-height: 0.7;">Email: {{user.email}}</h4>
+                          <!-- <p class="text-muted">{{user.email}}</p> -->
+                        </div>
+                        <div class="col-6 mb-3">
+                          <h4 style="line-height: 0.7;">Phone: {{user.phonenumber}}</h4>
+                          <!-- <p class="text-muted">{{user.phonenumber}}</p> -->
+                        </div>
+                      
+                      <h4 style="line-height: 0.7;">Address: {{user.address}}</h4>
+                          <!-- <p class="text-muted">{{user.address}}</p> -->
+                          <hr class="mt-0 mb-4">
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+  
